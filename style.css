@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+h1 + p {
+    color: #f18119;
+    font-weight: 900;
+    font-size: 1.13125rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.13125rem;
+    margin: 0;
+}
+
+h2 + p {
+    color: #f18119;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    color: #f18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    border-top: 5px solid #f18119;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+    padding-top: 2px;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong {
+    font-weight: 900;
+}
+
+/* Intro Section */
+
+.intro {
+    background-color: #404040;
+    background-image: url(images/jon-tyson-kctt4tL1dkE-unsplash.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+}
+.intro .top-text {
+    order: 1;
+}
+
+.intro h1 {
+    order: 2;
+}
+
+.intro p{
+    order: 3;
+}
+
+/* .intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.main-content {
+    padding: 2em 1em;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* form */
+
+.email-collector {
+    display: inline-block;
+    /* border: 3px #f18119 solid; */
+    width: 80%;
+    max-width: 300px;
+}
+
+/* ::placeholder {
+    text-align: center;
+} */
+
+input,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    text-align: inherit;
+    font-family: inherit;
+    margin-bottom: .55em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-image: linear-gradient(270deg,#FF713B, #FFA51D);
+    color: #fff;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+/* input:hover, */
+input:focus {
+    transform: scale(1.1); 
+}
+
+/* media */
+
+@media (min-width: 550px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+    .top-text,
+    .fine-print {
+        font-size: 0.625rem;
+    }
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-intro {
+        height: 100%;
+    }
+}
